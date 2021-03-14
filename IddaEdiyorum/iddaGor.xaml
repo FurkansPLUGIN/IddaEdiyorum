@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PusulaCompass.iddaGor"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"
+            />
+       
+
+    </pages:PopupPage.Animation>
+    <StackLayout>
+        <Frame BackgroundColor="#323232" BorderColor="Blue" CornerRadius="25">
+            <StackLayout>
+                <Label Text="Silmek için üzerine tıkla"></Label>
+
+                <Button Text="SİL" TextColor="Blue" BorderColor="Blue" BorderWidth="4"
+                       FontAttributes="Bold" FontSize="25" BackgroundColor="#323232" CornerRadius="25" 
+                        x:Name="sil" Clicked="sil_Clicked"/>
+            </StackLayout>
+        </Frame>
+
+        <Frame BackgroundColor="#323232" BorderColor="Blue" CornerRadius="25">
+            <StackLayout>
+                <Label Text="Kazananı Güncelle"></Label>
+                
+                <Entry Placeholder="Kazanan: " x:Name="kazananSec"></Entry>
+                
+                <Button Text="KAYDET" TextColor="Blue" BorderColor="Blue" BorderWidth="4"
+                       FontAttributes="Bold" FontSize="25" BackgroundColor="#323232" CornerRadius="25" 
+                       x:Name="guncelle" Clicked="guncelle_Clicked"/>
+            </StackLayout>
+        </Frame>
+
+        <Frame BackgroundColor="#323232" BorderColor="Blue" CornerRadius="25">
+            <StackLayout>
+                
+                <Button Text="GERİ" TextColor="Blue" BorderColor="Blue" BorderWidth="4"
+                       FontAttributes="Bold" FontSize="25" BackgroundColor="#323232" CornerRadius="25" 
+                        x:Name="geri" Clicked="geri_Clicked"/>
+            </StackLayout>
+        </Frame>
+
+    </StackLayout>
+   
+
+    
+</pages:PopupPage>
